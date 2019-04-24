@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Source configuration. Yes it's insecure. To be improved.
+. settings.conf
+
+# Follow the journal, reading every line
+journalctl -f | \
+while read line ; do
+    # Print to stdout and grep for the pattern
+    echo "$line" | grep -i "$pattern"
+    # Check grep exit status
+    if [ $? = 0 ]
+    then
+        echo "Found it"
+    fi
+done
