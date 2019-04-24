@@ -13,7 +13,7 @@ Then you can do `curl https://api.telegram.org/bot<TOKEN>/getUpdates` and
 the JSON response will contain an `id` value in the `chat` object.
 This is your chat id.
 
-Once everything is configured, simply run `./telegrep.sh` and whenever the
+Once everything is configured, simply run `./telegrep` and whenever the
 pattern you defined in the configuration is encountered in the systemd journal,
 you will receive a message with that line from the log.
 
