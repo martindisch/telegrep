@@ -11,6 +11,7 @@ while read line ; do
     # Check grep exit status
     if [ $? = 0 ]
     then
-        echo "Found it"
+        curl -s -X POST "https://api.telegram.org/bot${token}/sendMessage" \
+        -d chat_id="$chat_id" -d text="$line" > /dev/null
     fi
 done

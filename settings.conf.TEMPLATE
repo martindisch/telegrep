@@ -1,2 +1,4 @@
 # Needs to be a valid bash script
 pattern=testpattern
+token=TELEGRAM_BOT_TOKEN
+chat_id=CHAT_TO_SEND_TO
