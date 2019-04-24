@@ -1,4 +1,7 @@
 # Needs to be a valid bash script
+
+# Case is ignored
 pattern=testpattern
+# Telegram bot
 token=TELEGRAM_BOT_TOKEN
 chat_id=CHAT_TO_SEND_TO
