@@ -6,8 +6,8 @@
 # Follow the journal, reading every line
 journalctl -f | \
 while read line ; do
-    # Print to stdout and grep for the pattern
-    echo "$line" | grep -E "$pattern"
+    # Grep the line for the pattern
+    grep -q -E "$pattern" <<< "$line"
     # Check grep exit status
     if [ $? = 0 ]
     then
