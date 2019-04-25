@@ -1,4 +1,4 @@
-# [WIP] telegrep
+# telegrep
 Monitor journald in real time and get Telegram messages when patterns match.
 
 ## Usage
@@ -19,6 +19,8 @@ Then enter your regular expression that you want to watch the journal for.
 Once everything is configured, simply run `./telegrep` and whenever the
 pattern you defined in the configuration is encountered in the systemd journal,
 you will receive a message with that line from the log.
+For testing purposes, you can write messages to the journal with
+`logger "This is my message"`.
 
 ### Installation
 Edit `telegrep.service` and change the user to the one you want to run it with.
