@@ -1,0 +1,10 @@
+[Unit]
+Description=telegrep journal monitoring & notifications
+
+[Service]
+User=martin
+WorkingDirectory=/opt/telegrep
+ExecStart=/opt/telegrep/telegrep
+
+[Install]
+WantedBy=multi-user.target
