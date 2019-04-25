@@ -27,8 +27,8 @@ Edit `telegrep.service` and change the user to the one you want to run it with.
 Also update both paths to point to where you keep the directory.
 After that, the installation could be something like this:
 ```
-# Link the unit file to the appropriate location
-sudo ln -s /opt/telegrep/telegrep.service /etc/systemd/system/
+# Copy the unit file to the appropriate location
+sudo cp telegrep.service /etc/systemd/system/
 # Start it
 sudo systemctl start telegrep
 # Check the status
