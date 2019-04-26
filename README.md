@@ -24,6 +24,8 @@ For testing purposes, you can write messages to the journal with
 
 ### Installation
 Edit `telegrep.service` and change the user to the one you want to run it with.
+Ideally, this is an unprivileged user, but keep in mind that it may need to be
+in the `systemd-journal` group to have access to the journal.
 Also update both paths to point to where you keep the directory.
 After that, the installation could be something like this:
 ```
