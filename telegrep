@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-# Source configuration. Yes it's insecure. To be improved.
+# Check if configuration is present
+if [ ! -f settings.conf ]; then
+    echo "settings.conf not found"
+    exit 1
+fi
+# Source configuration
 . settings.conf
 
 # Follow the journal, reading every line
