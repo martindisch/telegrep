@@ -11,8 +11,14 @@ fi
 # Follow the journal, reading every line
 journalctl -f | \
 while read line ; do
-    # Grep the line for the pattern
-    grep -q -E "$pattern" <<< "$line"
+    if [ -z "$exceptions" ]
+    then
+        # Grep the line for the pattern
+        grep -q -E "$pattern" <<< "$line"
+    else
+        # Grep the line for the pattern and filter out exceptions
+        grep -E "$pattern" <<< "$line" | grep -q -E -v "$exceptions"
+    fi
     # Check grep exit status
     if [ $? = 0 ]
     then

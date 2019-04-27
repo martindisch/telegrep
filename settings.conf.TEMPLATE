@@ -4,6 +4,9 @@
 # The pattern will be passed to grep -E, so it accepts extended regular
 # expressions. You can use | to divide multiple patterns.
 pattern='BTRFS error|Accepted publickey'
+# Matches containing any of these will not cause a notification (grep -E -v)
+# Leave empty or comment out if unused
+exceptions='127.0.0.1|123.456.7.8'
 # Telegram bot
 token=TELEGRAM_BOT_TOKEN
 chat_id=CHAT_TO_SEND_TO
